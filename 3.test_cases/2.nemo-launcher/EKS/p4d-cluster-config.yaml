@@ -2,11 +2,11 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: <my-p4de-eks-cluster>
-  version: "1.27"
+  name: <my-p4d-eks-cluster>
+  version: "1.31"
   region: us-west-2
   tags:
-    karpenter.sh/discovery: awsankur-p4de-cluster
+    karpenter.sh/discovery: awsnemo-p4d-cluster
 
 availabilityZones:
   - us-west-2a
@@ -24,9 +24,9 @@ managedNodeGroups:
         autoScaler: true
         cloudWatch: true
 
-  - name: p4de-nodes
-    instanceType: p4de.24xlarge
-    instancePrefix: p4de-odcr-nodes
+  - name: p4d-nodes
+    instanceType: p4d.24xlarge
+    instancePrefix: p4d-odcr-nodes
     privateNetworking: true
     availabilityZones: ["us-west-2b"]
     efaEnabled: true
@@ -34,9 +34,7 @@ managedNodeGroups:
     desiredCapacity: 2
     maxSize: 10
     volumeSize: 900
-    capacityReservation:
-      capacityReservationTarget:
-        capacityReservationID: "cr-id"
+
     iam:
       withAddonPolicies:
         cloudWatch: true
