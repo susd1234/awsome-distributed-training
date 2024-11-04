@@ -33,14 +33,6 @@ managedNodeGroups:
     desiredCapacity: 2
     maxSize: 10
     volumeSize: 900
-    NetworkInterfaces:
-    - AssociatePublicIpAddress: false
-      DeviceIndex: 0
-      GroupSet:
-        - Ref: SecurityGroup
-      SubnetId:
-        Ref: PrivateSubnet0
-
     iam:
       withAddonPolicies:
         cloudWatch: true
