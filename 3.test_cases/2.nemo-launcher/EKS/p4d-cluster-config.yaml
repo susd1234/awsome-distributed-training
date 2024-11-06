@@ -18,6 +18,7 @@ managedNodeGroups:
   - name: sys
     instanceType: c5.2xlarge
     desiredCapacity: 1
+    privateNetworking: true
     iam:
       withAddonPolicies:
         autoScaler: true
