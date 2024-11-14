@@ -8,10 +8,6 @@ metadata:
   tags:
     karpenter.sh/discovery: awsnemo-p4d-cluster
 
-availabilityZones:
-  - us-west-2a
-  - us-west-2b
-  - us-west-2c
 
 managedNodeGroups:
 
