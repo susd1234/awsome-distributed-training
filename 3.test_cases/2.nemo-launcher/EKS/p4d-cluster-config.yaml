@@ -8,10 +8,6 @@ metadata:
   tags:
     karpenter.sh/discovery: awsnemo-p4d-cluster
 
-availabilityZones:
-  - us-west-2a
-  - us-west-2b
-  - us-west-2c
 
 managedNodeGroups:
 
@@ -28,7 +24,6 @@ managedNodeGroups:
     instanceType: p4d.24xlarge
     instancePrefix: p4d-odcr-nodes
     privateNetworking: true
-    availabilityZones: ["us-west-2b"]
     efaEnabled: true
     minSize: 2
     desiredCapacity: 2
