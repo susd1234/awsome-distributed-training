@@ -49,6 +49,5 @@ vpc:
       us-west-2c:
         id: "subnet-07b25a84b24d8bb6c"
   clusterEndpoints:
-    publicAccess:  true
     privateAccess: true
     
