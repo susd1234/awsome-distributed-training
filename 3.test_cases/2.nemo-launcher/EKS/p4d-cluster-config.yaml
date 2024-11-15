@@ -24,6 +24,7 @@ managedNodeGroups:
     instanceType: p4d.24xlarge
     instancePrefix: p4d-odcr-nodes
     privateNetworking: true
+    availabilityZones: ["us-west-2b"]
     efaEnabled: true
     minSize: 2
     desiredCapacity: 2
