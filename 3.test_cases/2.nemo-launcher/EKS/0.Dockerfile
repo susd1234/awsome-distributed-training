@@ -42,15 +42,15 @@ RUN apt-get install -y --allow-unauthenticated \
 # Uncomment below stanza to install the latest NCCL
 # Require efa-installer>=1.29.0 for nccl-2.19.0 to avoid libfabric gave NCCL error.
 
-RUN apt-get remove -y libnccl2 libnccl-dev \
-   && cd /tmp \
-   && git clone https://github.com/NVIDIA/nccl.git -b v${NCCL_VERSION} \
-   && cd nccl \
-   && make -j src.build BUILDDIR=/usr/local \
-   # nvcc to target p5 and p4 instances
-   # NVCC_GENCODE="-gencode=arch=compute_90,code=sm_90 -gencode=arch=compute_80,code=sm_80" \
-   NVCC_GENCODE="-gencode=arch=compute_75,code=sm_75" \
-   && rm -rf /tmp/nccl
+# RUN apt-get remove -y libnccl2 libnccl-dev \
+#   && cd /tmp \
+#   && git clone https://github.com/NVIDIA/nccl.git -b v${NCCL_VERSION} \
+#   && cd nccl \
+#   && make -j src.build BUILDDIR=/usr/local \
+#   # nvcc to target p5 and p4 instances
+#   # NVCC_GENCODE="-gencode=arch=compute_90,code=sm_90 -gencode=arch=compute_80,code=sm_80" \
+#   NVCC_GENCODE="-gencode=arch=compute_75,code=sm_75" \
+#   && rm -rf /tmp/nccl
 
 # EFA
 RUN apt-get update && \
