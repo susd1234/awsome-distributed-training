@@ -49,6 +49,7 @@ RUN apt-get remove -y libnccl2 libnccl-dev \
    && make -j src.build BUILDDIR=/usr/local \
    # nvcc to target p5 and p4 instances
    # NVCC_GENCODE="-gencode=arch=compute_90,code=sm_90 -gencode=arch=compute_80,code=sm_80" \
+   NVCC_GENCODE="-gencode=arch=compute_75,code=sm_75" \
    && rm -rf /tmp/nccl
 
 # EFA
@@ -98,7 +99,8 @@ RUN git clone https://github.com/NVIDIA/nccl-tests.git /opt/nccl-tests \
     MPI_HOME=/opt/amazon/openmpi \
     CUDA_HOME=/usr/local/cuda \
     # nvcc to target p5 and p4 instances
-    NVCC_GENCODE="-gencode=arch=compute_90,code=sm_90 -gencode=arch=compute_80,code=sm_80"
+    # NVCC_GENCODE="-gencode=arch=compute_90,code=sm_90 -gencode=arch=compute_80,code=sm_80"
+    NVCC_GENCODE="-gencode=arch=compute_75,code=sm_75"
 
 
 # To avoid this error
