@@ -14,7 +14,7 @@ spec:
   storageClassName: fsx-sc
   csi:
     driver: fsx.csi.aws.com
-    volumeHandle: fs-06f973592c9d23795  # from AWS FSx console: File system ID
+    volumeHandle: fs-088319419f1710873  # from AWS FSx console: File system ID
     volumeAttributes:
-      dnsname: fs-06f973592c9d23795.fsx.us-west-2.amazonaws.com  # from AWS FSx console: DNS name
-      mountname: Pnz4xbev # from AWS FSx console: Mount name
+      dnsname: fs-088319419f1710873.fsx.us-west-2.amazonaws.com  # from AWS FSx console: DNS name
+      mountname: avj4jbev # from AWS FSx console: Mount name
