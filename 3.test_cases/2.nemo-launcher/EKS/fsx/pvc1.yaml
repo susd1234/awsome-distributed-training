@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fsx-pvc1
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: fsx-sc1
+  resources:
+    requests:
+      storage: 1200Gi
