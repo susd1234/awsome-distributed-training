@@ -13,7 +13,7 @@ volumes:
     type: "Directory"
   persistentVolumeClaim:
     # This claim should be created before running
-    claimName: FSX-PVC
+    claimName: fsx-pvc1
     subPath: fsx-shared  # path is mirrored into pod (no leading slash b/c relative to root)
 # NOTE: These args will soon be deprecated
 nfs_server: null  # Hostname or IP address for the NFS server where data is stored.
