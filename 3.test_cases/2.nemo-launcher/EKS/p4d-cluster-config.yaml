@@ -3,7 +3,7 @@ kind: ClusterConfig
 
 metadata:
   name: "nemo-p4d-eks-cluster"
-  version: "1.31"
+  version: "1.32"
   region: us-west-2
   tags:
     karpenter.sh/discovery: awsnemo-p4d-cluster
@@ -21,7 +21,7 @@ managedNodeGroups:
         cloudWatch: true
 
   - name: p4d-nodes
-    instanceType: p4d.24xlarge
+    instanceType: g4dn.16xlarge
     instancePrefix: p4d-odcr-nodes
     privateNetworking: true
     availabilityZones: ["us-west-2b"]
