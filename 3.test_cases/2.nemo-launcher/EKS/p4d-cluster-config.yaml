@@ -44,11 +44,11 @@ vpc:
   subnets:
     private:
       us-west-2a:
-        id: "subnet-08203037883e911b9"
+        id: "subnet-0c8c26a3c6a17a9aa"
       us-west-2b:
-        id: "subnet-0ac3089d3d85b01a0"
+        id: "subnet-0a78dbce6aebe0b77"
       us-west-2c:
-        id: "subnet-07b25a84b24d8bb6c"
+        id: "subnet-0faec07ee4d16a337"
   clusterEndpoints:
     privateAccess: true
     
