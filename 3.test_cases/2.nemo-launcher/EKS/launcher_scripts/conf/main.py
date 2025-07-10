@@ -26,7 +26,7 @@ from nemo_launcher.core.data_stages import (
     MultimodalDataPreparation,
     PileDataPreparation,
     SlimPajamaDataPreparation,
-    # SteerLMDataPreparation,
+    SteerLMDataPreparation,
 )
 from nemo_launcher.core.export_stages import Export
 from nemo_launcher.core.rlhf_stages import RLHFPPO, RLHFRewardModel
@@ -43,7 +43,7 @@ from nemo_launcher.core.stages import (
     NeMoEvaluation,
     PromptLearning,
     Training,
-    # SteerLMRegSFT,
+    SteerLMRegSFT,
     ConversionHF2NeMo,
     PostTrainingQuantization,
     RAGIndexing,
@@ -134,7 +134,7 @@ STR2STAGECLASS = {
             "mixtral",
         ],
         MC4DataPreparation: ["mt5"],
-        # SteerLMDataPreparation: ["steerlm"],
+        SteerLMDataPreparation: ["steerlm"],
         CustomDataPreparation: ["generic"],
         MultimodalDataPreparation: ["multimodal"],
         FIDEvaluationDataPreparation: ["fid_evaluation"],
@@ -143,7 +143,7 @@ STR2STAGECLASS = {
     "rlhf_rm": RLHFRewardModel,
     "rlhf_ppo": RLHFPPO,
     "data_curation": DataCurationStage,
-    # "steerlm_reg": SteerLMRegSFT,
+    "steerlm_reg": SteerLMRegSFT,
     "ptq": PostTrainingQuantization,
     "rag_indexing": RAGIndexing,
     "rag_generating": RAGGenerating,
