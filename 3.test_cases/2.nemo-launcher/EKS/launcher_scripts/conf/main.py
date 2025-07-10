@@ -150,8 +150,8 @@ STR2STAGECLASS = {
 }
 
 
-# @hydra.main(config_path="conf", config_name="config", version_base="1.2")
-@hydra.main(config_path="", config_name="config", version_base="1.2")
+@hydra.main(config_path="conf", config_name="config", version_base="1.2")
+# @hydra.main(config_path="", config_name="config", version_base="1.2")
 def main(cfg: omegaconf.DictConfig):
     requested_stages = cfg.get("stages")
 
