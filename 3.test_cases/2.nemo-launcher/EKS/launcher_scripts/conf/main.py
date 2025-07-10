@@ -26,7 +26,7 @@ from nemo_launcher.core.data_stages import (
     MultimodalDataPreparation,
     PileDataPreparation,
     SlimPajamaDataPreparation,
-    SteerLMDataPreparation,
+    # SteerLMDataPreparation,
 )
 from nemo_launcher.core.export_stages import Export
 from nemo_launcher.core.rlhf_stages import RLHFPPO, RLHFRewardModel
@@ -43,7 +43,7 @@ from nemo_launcher.core.stages import (
     NeMoEvaluation,
     PromptLearning,
     Training,
-    SteerLMRegSFT,
+    # SteerLMRegSFT,
     ConversionHF2NeMo,
     PostTrainingQuantization,
     RAGIndexing,
