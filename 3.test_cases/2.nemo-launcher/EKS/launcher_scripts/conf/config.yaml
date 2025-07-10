@@ -3,9 +3,9 @@ defaults:
   - cluster: k8s  # Set to bcm for BCM and BCP clusters. Set to k8s for a k8s cluster.
   - data_curation: common_crawl/curate_common_crawl
   - data_preparation: gpt3/download_gpt3_pile #steerlm/steerlm_data_prep1 or steerlm/steerlm_data_prep2_reg
-  - training: gpt3/126m
-  - conversion: gpt3/convert_gpt3
-  - conversion_hf2nemo: hf_llama2/convert_llama2_nemo
+  # - training: gpt3/126m
+  # - conversion: gpt3/convert_gpt3
+  # - conversion_hf2nemo: hf_llama2/convert_llama2_nemo
   - fw_inference: null
   - external_conversion: null
   - fine_tuning: null
@@ -13,7 +13,7 @@ defaults:
   - prompt_learning: null
   - adapter_learning: null
   - ia3_learning: null
-  - evaluation: gpt3/evaluate_all
+  # - evaluation: gpt3/evaluate_all
   # - export: gpt3/export_gpt3
   # - rlhf_rm: gpt3/2b_rm
   # - rlhf_ppo: gpt3/2b_ppo
