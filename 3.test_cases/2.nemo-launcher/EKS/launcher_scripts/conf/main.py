@@ -134,7 +134,7 @@ STR2STAGECLASS = {
             "mixtral",
         ],
         MC4DataPreparation: ["mt5"],
-        SteerLMDataPreparation: ["steerlm"],
+        # SteerLMDataPreparation: ["steerlm"],
         CustomDataPreparation: ["generic"],
         MultimodalDataPreparation: ["multimodal"],
         FIDEvaluationDataPreparation: ["fid_evaluation"],
@@ -143,15 +143,15 @@ STR2STAGECLASS = {
     "rlhf_rm": RLHFRewardModel,
     "rlhf_ppo": RLHFPPO,
     "data_curation": DataCurationStage,
-    "steerlm_reg": SteerLMRegSFT,
+    # "steerlm_reg": SteerLMRegSFT,
     "ptq": PostTrainingQuantization,
     "rag_indexing": RAGIndexing,
     "rag_generating": RAGGenerating,
 }
 
 
-@hydra.main(config_path="conf", config_name="config", version_base="1.2")
-# @hydra.main(config_path="", config_name="config", version_base="1.2")
+# @hydra.main(config_path="conf", config_name="config", version_base="1.2")
+@hydra.main(config_path="", config_name="config", version_base="1.2")
 def main(cfg: omegaconf.DictConfig):
     requested_stages = cfg.get("stages")
 
